@@ -13,9 +13,9 @@ from hikkatl.hints import EntityLike
 from hikkatl.tl.types import Message, PeerUser, User
 from hikkatl.utils import get_display_name
 
-from .. import loader, main, security, utils
-from ..inline.types import InlineCall, InlineMessage
-from ..security import (
+from hikka import loader, main, security, utils
+from hikka.inline.types import InlineCall, InlineMessage
+from hikka.security import (
     DEFAULT_PERMISSIONS,
     EVERYONE,
     GROUP_ADMIN,

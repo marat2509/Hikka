@@ -8,8 +8,8 @@ import logging
 
 from hikkatl.tl.types import Message
 
-from .. import loader, translations, utils
-from ..inline.types import InlineCall
+from hikka import loader, translations, utils
+from hikka.inline.types import InlineCall
 
 logger = logging.getLogger(__name__)
 

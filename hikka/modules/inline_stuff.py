@@ -11,8 +11,8 @@ from hikkatl.errors.rpcerrorlist import YouBlockedUserError
 from hikkatl.tl.functions.contacts import UnblockRequest
 from hikkatl.tl.types import Message
 
-from .. import loader, utils
-from ..inline.types import BotInlineMessage
+from hikka import loader, utils
+from hikka.inline.types import BotInlineMessage
 
 
 @loader.tds

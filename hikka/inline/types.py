@@ -11,7 +11,7 @@ from aiogram.types import InlineQuery as AiogramInlineQuery
 from aiogram.types import InlineQueryResultArticle, InputTextMessageContent
 from aiogram.types import Message as AiogramMessage
 
-from .. import utils
+from hikka import utils
 
 logger = logging.getLogger(__name__)
 

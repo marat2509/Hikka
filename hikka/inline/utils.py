@@ -35,8 +35,8 @@ from aiogram.utils.exceptions import (
 )
 from hikkatl.utils import resolve_inline_message_id
 
-from .. import utils
-from ..types import HikkaReplyMarkup
+from hikka import utils
+from hikka.types import HikkaReplyMarkup
 from .types import InlineCall, InlineUnit
 
 logger = logging.getLogger(__name__)

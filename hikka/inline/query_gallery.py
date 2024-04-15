@@ -11,7 +11,7 @@ import typing
 
 from aiogram.types import InlineQuery, InlineQueryResultArticle, InputTextMessageContent
 
-from .. import utils
+from hikka import utils
 from .types import InlineUnit
 
 logger = logging.getLogger(__name__)

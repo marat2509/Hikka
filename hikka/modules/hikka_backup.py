@@ -17,8 +17,8 @@ from pathlib import Path
 
 from hikkatl.tl.types import Message
 
-from .. import loader, utils
-from ..inline.types import BotInlineCall
+from hikka import loader, utils
+from hikka.inline.types import BotInlineCall
 
 logger = logging.getLogger(__name__)
 

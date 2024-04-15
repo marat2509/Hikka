@@ -20,10 +20,10 @@ from hikkatl.tl.functions.contacts import UnblockRequest
 from hikkatl.tl.types import Message
 from hikkatl.utils import get_display_name
 
-from .. import utils
-from ..database import Database
-from ..tl_cache import CustomTelegramClient
-from ..translations import Translator
+from hikka import utils
+from hikka.database import Database
+from hikka.tl_cache import CustomTelegramClient
+from hikka.translations import Translator
 from .bot_pm import BotPM
 from .events import Events
 from .form import Form

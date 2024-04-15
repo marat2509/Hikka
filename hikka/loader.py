@@ -25,11 +25,11 @@ from uuid import uuid4
 
 from hikkatl.tl.tlobject import TLObject
 
-from . import security, utils, validators
-from .database import Database
-from .inline.core import InlineManager
-from .translations import Strings, Translator
-from .types import (
+from hikka import security, utils, validators
+from hikka.database import Database
+from hikka.inline.core import InlineManager
+from hikka.translations import Strings, Translator
+from hikka.types import (
     Command,
     ConfigValue,
     CoreOverwriteError,
@@ -726,7 +726,7 @@ class Modules:
 
     @property
     def _remove_core_protection(self) -> bool:
-        from . import main
+        from hikka import main
 
         return self._db.get(main.__name__, "remove_core_protection", False)
 
@@ -887,7 +887,7 @@ class Modules:
             key = "dragon.prefix"
             default = ","
         else:
-            from . import main
+            from hikka import main
 
             key = main.__name__
             default = "."

@@ -9,8 +9,8 @@ import contextlib
 
 import git
 
-from .. import loader, utils, version
-from ..inline.types import InlineCall
+from hikka import loader, utils, version
+from hikka.inline.types import InlineCall
 
 
 @loader.tds

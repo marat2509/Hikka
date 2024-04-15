@@ -22,7 +22,7 @@ from aiogram.types import (
 )
 from aiogram.types import Message as AiogramMessage
 
-from .. import utils
+from hikka import utils
 from .types import BotInlineCall, InlineCall, InlineQuery, InlineUnit
 
 logger = logging.getLogger(__name__)

@@ -31,10 +31,10 @@ from hikkatl.tl.functions.messages import GetFullChatRequest
 from hikkatl.tl.types import ChatParticipantAdmin, ChatParticipantCreator, Message
 from hikkatl.utils import get_display_name
 
-from . import main, utils
-from .database import Database
-from .tl_cache import CustomTelegramClient
-from .types import Command
+from hikka import main, utils
+from hikka.database import Database
+from hikka.tl_cache import CustomTelegramClient
+from hikka.types import Command
 
 logger = logging.getLogger(__name__)
 

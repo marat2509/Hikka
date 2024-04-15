@@ -29,8 +29,8 @@ from hikkatl.errors.rpcerrorlist import ChatSendInlineForbiddenError
 from hikkatl.extensions.html import CUSTOM_EMOJIS
 from hikkatl.tl.types import Message
 
-from .. import main, utils
-from ..types import HikkaReplyMarkup
+from hikka import main, utils
+from hikka.types import HikkaReplyMarkup
 from .types import InlineMessage, InlineUnit
 
 logger = logging.getLogger(__name__)

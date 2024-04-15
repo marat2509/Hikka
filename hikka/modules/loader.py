@@ -30,12 +30,12 @@ from hikkatl.errors.rpcerrorlist import MediaCaptionTooLongError
 from hikkatl.tl.functions.channels import JoinChannelRequest
 from hikkatl.tl.types import Channel, Message
 
-from .. import loader, main, utils
-from .._local_storage import RemoteStorage
-from ..compat import dragon, geek
-from ..compat.pyroproxy import PyroProxyClient
-from ..inline.types import InlineCall
-from ..types import CoreOverwriteError, CoreUnloadError, DragonModule
+from hikka import loader, main, utils
+from hikka._local_storage import RemoteStorage
+from hikka.compat import dragon, geek
+from hikka.compat.pyroproxy import PyroProxyClient
+from hikka.inline.types import InlineCall
+from hikka.types import CoreOverwriteError, CoreUnloadError, DragonModule
 
 logger = logging.getLogger(__name__)
 

@@ -8,8 +8,8 @@ import logging
 import os
 from random import choice
 
-from .. import loader, translations, utils
-from ..inline.types import BotInlineCall
+from hikka import loader, translations, utils
+from hikka.inline.types import BotInlineCall
 
 logger = logging.getLogger(__name__)
 

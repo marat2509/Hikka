@@ -20,9 +20,9 @@ import rsa
 from hikkatl.tl.types import Message
 from hikkatl.utils import resolve_inline_message_id
 
-from .. import loader, main, utils
-from ..types import InlineCall, InlineQuery
-from ..version import __version__
+from hikka import loader, main, utils
+from hikka.types import InlineCall, InlineQuery
+from hikka.version import __version__
 
 logger = logging.getLogger(__name__)
 

@@ -17,10 +17,10 @@ from hikkatl.tl.functions.messages import (
 from hikkatl.tl.types import Message
 from hikkatl.utils import get_display_name
 
-from .. import loader, log, main, utils
-from .._internal import fw_protect, restart
-from ..inline.types import InlineCall
-from ..web import core
+from hikka import loader, log, main, utils
+from hikka._internal import fw_protect, restart
+from hikka.inline.types import InlineCall
+from hikka.web import core
 
 logger = logging.getLogger(__name__)
 

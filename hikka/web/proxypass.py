@@ -10,7 +10,7 @@ import os
 import re
 import typing
 
-from .. import utils
+from hikka import utils
 
 logger = logging.getLogger(__name__)
 

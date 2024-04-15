@@ -9,9 +9,9 @@ import hikkatl
 from hikkatl.extensions.html import CUSTOM_EMOJIS
 from hikkatl.tl.types import Message
 
-from .. import loader, main, utils, version
-from ..compat.dragon import DRAGON_EMOJI
-from ..inline.types import InlineCall
+from hikka import loader, main, utils, version
+from hikka.compat.dragon import DRAGON_EMOJI
+from hikka.inline.types import InlineCall
 
 
 @loader.tds

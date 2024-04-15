@@ -58,16 +58,16 @@ from hikkatl.sessions import MemorySession, SQLiteSession
 from hikkatl.tl.functions.account import GetPasswordRequest
 from hikkatl.tl.functions.auth import CheckPasswordRequest
 
-from . import database, loader, utils, version
-from ._internal import print_banner
-from .dispatcher import CommandDispatcher
-from .qr import QRCode
-from .tl_cache import CustomTelegramClient
-from .translations import Translator
-from .version import __version__
+from hikka import database, loader, utils, version
+from hikka._internal import print_banner
+from hikka.dispatcher import CommandDispatcher
+from hikka.qr import QRCode
+from hikka.tl_cache import CustomTelegramClient
+from hikka.translations import Translator
+from hikka.version import __version__
 
 try:
-    from .web import core
+    from hikka.web import core
 except ImportError:
     web_available = False
     logging.exception("Unable to import web")
@@ -161,7 +161,7 @@ except Exception:
 
 def run_config():
     """Load configurator.py"""
-    from . import configurator
+    from hikka import configurator
 
     return configurator.api_config(IS_TERMUX or None)
 
@@ -425,7 +425,7 @@ class Hikka:
             )
         except FileNotFoundError:
             try:
-                from . import api_token
+                from hikka import api_token
             except ImportError:
                 try:
                     api_token = api_token_type(

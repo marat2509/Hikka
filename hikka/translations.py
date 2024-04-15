@@ -12,10 +12,10 @@ from pathlib import Path
 import requests
 from ruamel.yaml import YAML
 
-from . import utils
-from .database import Database
-from .tl_cache import CustomTelegramClient
-from .types import Module
+from hikka import utils
+from hikka.database import Database
+from hikka.tl_cache import CustomTelegramClient
+from hikka.types import Module
 
 logger = logging.getLogger(__name__)
 yaml = YAML(typ="safe")

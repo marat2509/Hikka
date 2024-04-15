@@ -19,8 +19,8 @@ from hikkatl.sessions import StringSession
 from hikkatl.tl.types import Message
 from meval import meval
 
-from .. import loader, main, utils
-from ..log import HikkaException
+from hikka import loader, main, utils
+from hikka.log import HikkaException
 
 
 class Brainfuck:

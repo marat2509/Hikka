@@ -27,7 +27,7 @@ from hikkatl.tl.types import (
 )
 from hikkatl.utils import is_list_like
 
-from .types import (
+from hikka.types import (
     CacheRecordEntity,
     CacheRecordFullChannel,
     CacheRecordFullUser,

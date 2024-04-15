@@ -6,6 +6,9 @@ authors = ["Dan Gazizullin <me@hikariatama.ru>"]
 license = "AGPLv3"
 readme = "README.md"
 
+[tool.poetry.scripts]
+hikka = "hikka:__main__"
+
 [tool.poetry.dependencies]
 python = "^3.8"
 setuptools = "*"

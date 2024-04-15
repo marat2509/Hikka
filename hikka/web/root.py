@@ -34,10 +34,10 @@ from hikkatl.tl.functions.auth import CheckPasswordRequest
 from hikkatl.tl.functions.contacts import UnblockRequest
 from hikkatl.utils import parse_phone
 
-from .. import database, main, utils
-from .._internal import restart
-from ..tl_cache import CustomTelegramClient
-from ..version import __version__
+from hikka import database, main, utils
+from hikka._internal import restart
+from hikka.tl_cache import CustomTelegramClient
+from hikka.version import __version__
 
 DATA_DIR = (
     "/data"

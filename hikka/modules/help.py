@@ -11,9 +11,9 @@ import logging
 from hikkatl.extensions.html import CUSTOM_EMOJIS
 from hikkatl.tl.types import Message
 
-from .. import loader, utils
-from ..compat.dragon import DRAGON_EMOJI
-from ..types import DragonModule
+from hikka import loader, utils
+from hikka.compat.dragon import DRAGON_EMOJI
+from hikka.types import DragonModule
 
 logger = logging.getLogger(__name__)
 

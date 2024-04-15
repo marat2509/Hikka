@@ -22,9 +22,9 @@ from hikkatl.tl.functions.messages import (
 )
 from hikkatl.tl.types import DialogFilter, Message
 
-from .. import loader, main, utils, version
-from .._internal import restart
-from ..inline.types import InlineCall
+from hikka import loader, main, utils, version
+from hikka._internal import restart
+from hikka.inline.types import InlineCall
 
 logger = logging.getLogger(__name__)
 

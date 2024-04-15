@@ -37,10 +37,10 @@ from hikkatl import events
 from hikkatl.errors import FloodWaitError, RPCError
 from hikkatl.tl.types import Message
 
-from . import main, security, utils
-from .database import Database
-from .loader import Modules
-from .tl_cache import CustomTelegramClient
+from hikka import main, security, utils
+from hikka.database import Database
+from hikka.loader import Modules
+from hikka.tl_cache import CustomTelegramClient
 
 logger = logging.getLogger(__name__)
 

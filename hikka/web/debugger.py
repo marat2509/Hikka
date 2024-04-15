@@ -14,8 +14,8 @@ from werkzeug import Request, Response
 from werkzeug.debug import DebuggedApplication
 from werkzeug.serving import BaseWSGIServer, make_server
 
-from .. import main, utils
-from . import proxypass
+from hikka import main, utils
+from hikka.web import proxypass
 
 logger = logging.getLogger(__name__)
 

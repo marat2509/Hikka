@@ -17,9 +17,9 @@ from hikkapyro import Client as PyroClient
 from hikkapyro import errors as pyro_errors
 from hikkapyro import raw
 
-from .. import utils
-from ..tl_cache import CustomTelegramClient
-from ..version import __version__
+from hikka import utils
+from hikka.tl_cache import CustomTelegramClient
+from hikka.version import __version__
 
 PROXY = {
     pyro_object: hikkatl.tl.alltlobjects.tlobjects[constructor_id]

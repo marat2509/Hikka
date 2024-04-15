@@ -7,8 +7,8 @@
 import asyncio
 import logging
 
-from .. import loader, utils
-from ..inline.types import BotInlineMessage, InlineCall
+from hikka import loader, utils
+from hikka.inline.types import BotInlineMessage, InlineCall
 
 logger = logging.getLogger(__name__)
 

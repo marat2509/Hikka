@@ -29,11 +29,11 @@ else:
 
 from hikkapyro import Client, errors, types
 
-from .. import version
-from .._internal import restart
-from ..database import Database
-from ..tl_cache import CustomTelegramClient
-from ..types import JSONSerializable
+from hikka import version
+from hikka._internal import restart
+from hikka.database import Database
+from hikka.tl_cache import CustomTelegramClient
+from hikka.types import JSONSerializable
 
 DRAGON_EMOJI = "<emoji document_id=5375360100196163660>🐲</emoji>"
 

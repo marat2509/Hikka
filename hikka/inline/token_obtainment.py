@@ -11,8 +11,8 @@ import re
 from hikkatl.errors.rpcerrorlist import YouBlockedUserError
 from hikkatl.tl.functions.contacts import UnblockRequest
 
-from .. import utils
-from .._internal import fw_protect
+from hikka import utils
+from hikka._internal import fw_protect
 from .types import InlineUnit
 
 logger = logging.getLogger(__name__)
@@ -70,7 +70,7 @@ class TokenObtainment(InlineUnit):
 
             try:
                 await fw_protect()
-                from .. import main
+                from hikka import main
 
                 m = await conv.send_file(main.BASE_PATH / "assets" / "bot_pfp.png")
                 r = await conv.get_response()
@@ -220,7 +220,7 @@ class TokenObtainment(InlineUnit):
 
                     try:
                         await fw_protect()
-                        from .. import main
+                        from hikka import main
 
                         m = await conv.send_file(
                             main.BASE_PATH / "assets" / "bot_pfp.png"

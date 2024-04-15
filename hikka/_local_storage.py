@@ -14,9 +14,9 @@ import typing
 
 import requests
 
-from . import utils
-from .tl_cache import CustomTelegramClient
-from .version import __version__
+from hikka import utils
+from hikka.tl_cache import CustomTelegramClient
+from hikka.version import __version__
 
 logger = logging.getLogger(__name__)
 

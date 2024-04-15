@@ -23,8 +23,8 @@ import typing
 from hikkatl.errors.rpcerrorlist import ChannelsTooMuchError
 from hikkatl.tl.types import Message, User
 
-from . import main, utils
-from .pointers import (
+from hikka import main, utils
+from hikka.pointers import (
     BaseSerializingMiddlewareDict,
     BaseSerializingMiddlewareList,
     NamedTupleMiddlewareDict,
@@ -32,8 +32,8 @@ from .pointers import (
     PointerDict,
     PointerList,
 )
-from .tl_cache import CustomTelegramClient
-from .types import JSONSerializable
+from hikka.tl_cache import CustomTelegramClient
+from hikka.types import JSONSerializable
 
 __all__ = [
     "Database",

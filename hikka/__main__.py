@@ -11,7 +11,7 @@ import os
 import subprocess
 import sys
 
-from ._internal import restart
+from hikka._internal import restart
 
 if (
     getpass.getuser() == "root"
@@ -73,11 +73,11 @@ else:
             restart()
 
     try:
-        from . import log
+        from hikka import log
 
         log.init()
 
-        from . import main
+        from hikka import main
     except ImportError as e:
         print(f"{str(e)}\n🔄 Attempting dependencies installation... Just wait ⏱")
         deps()

@@ -33,9 +33,9 @@ from hikkatl.tl.types import (
     UserFull,
 )
 
-from . import version
-from ._reference_finder import replace_all_refs
-from .inline.types import (
+from hikka import version
+from hikka._reference_finder import replace_all_refs
+from hikka.inline.types import (
     BotInlineCall,
     BotInlineMessage,
     BotMessage,
@@ -44,7 +44,7 @@ from .inline.types import (
     InlineQuery,
     InlineUnit,
 )
-from .pointers import PointerDict, PointerList
+from hikka.pointers import PointerDict, PointerList
 
 __all__ = [
     "JSONSerializable",
@@ -263,7 +263,7 @@ class Module:
         Please, note that if you set `inline=True`, first frame will be shown with an empty
         button due to the limitations of Telegram API
         """
-        from . import utils
+        from hikka import utils
 
         with contextlib.suppress(AttributeError):
             _hikka_client_id_logging_tag = copy.copy(self.client.tg_id)  # noqa: F841
@@ -316,7 +316,7 @@ class Module:
         channel: EntityLike,
         event: asyncio.Event,
     ):
-        from . import utils
+        from hikka import utils
 
         local_event = asyncio.Event()
         self.__approve += [(channel, local_event)]  # skipcq: PTC-W0037
@@ -337,7 +337,7 @@ class Module:
         channel: EntityLike,
         event: asyncio.Event,
     ):
-        from . import utils
+        from hikka import utils
 
         self._db.set(
             "hikka.main",
@@ -373,7 +373,7 @@ class Module:
         :rtype: bool
         :notice: This method will block module loading until the request is approved or declined.
         """
-        from . import utils
+        from hikka import utils
 
         event = asyncio.Event()
         await self.client(
@@ -467,9 +467,9 @@ class Module:
         :raise: RuntimeError if library classname exists in :obj:`Modules`.libraries
         """
 
-        from . import utils  # Avoiding circular import
-        from .loader import USER_INSTALL, VALID_PIP_PACKAGES
-        from .translations import Strings
+        from hikka import utils  # Avoiding circular import
+        from hikka.loader import USER_INSTALL, VALID_PIP_PACKAGES
+        from hikka.translations import Strings
 
         def _raise(e: Exception):
             if suspend_on_error:
@@ -960,7 +960,7 @@ class ConfigValue:
 
             if self.validator is not None:
                 if value is not None:
-                    from . import validators
+                    from hikka import validators
 
                     try:
                         value = self.validator.validate(value)

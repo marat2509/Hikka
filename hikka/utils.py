@@ -93,10 +93,10 @@ from hikkatl.tl.types import (
     User,
 )
 
-from ._internal import fw_protect
-from .inline.types import InlineCall, InlineMessage
-from .tl_cache import CustomTelegramClient
-from .types import HikkaReplyMarkup, ListLike, Module
+from hikka._internal import fw_protect
+from hikka.inline.types import InlineCall, InlineMessage
+from hikka.tl_cache import CustomTelegramClient
+from hikka.types import HikkaReplyMarkup, ListLike, Module
 
 FormattingEntity = typing.Union[
     MessageEntityUnknown,
@@ -891,7 +891,7 @@ def get_named_platform() -> str:
     Returns formatted platform name
     :return: Platform name
     """
-    from . import main
+    from hikka import main
 
     with contextlib.suppress(Exception):
         if os.path.isfile("/proc/device-tree/model"):
@@ -928,7 +928,7 @@ def get_platform_emoji() -> str:
     Returns custom emoji for current platform
     :return: Emoji entity in string
     """
-    from . import main
+    from hikka import main
 
     BASE = "".join(
         (
@@ -1558,7 +1558,7 @@ def get_version_raw() -> str:
     Get the version of the userbot
     :return: Version in format %s.%s.%s
     """
-    from . import version
+    from hikka import version
 
     return ".".join(map(str, list(version.__version__)))
 

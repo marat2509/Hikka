@@ -11,8 +11,8 @@ import typing
 import grapheme
 from emoji import get_emoji_unicode_dict
 
-from . import utils
-from .translations import SUPPORTED_LANGUAGES, translator
+from hikka import utils
+from hikka.translations import SUPPORTED_LANGUAGES, translator
 
 ConfigAllowedTypes = typing.Union[tuple, list, str, int, bool, None]
 

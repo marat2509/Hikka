@@ -20,10 +20,10 @@ from logging.handlers import RotatingFileHandler
 import hikkatl
 from aiogram.utils.exceptions import NetworkError
 
-from . import utils
-from .tl_cache import CustomTelegramClient
-from .types import BotInlineCall, Module
-from .web.debugger import WebDebugger
+from hikka import utils
+from hikka.tl_cache import CustomTelegramClient
+from hikka.types import BotInlineCall, Module
+from hikka.web.debugger import WebDebugger
 
 # Monkeypatch linecache to make interactive line debugger available
 # in werkzeug web debugger

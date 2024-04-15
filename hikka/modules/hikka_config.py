@@ -12,8 +12,8 @@ from math import ceil
 
 from hikkatl.tl.types import Message
 
-from .. import loader, translations, utils
-from ..inline.types import InlineCall
+from hikka import loader, translations, utils
+from hikka.inline.types import InlineCall
 
 # Everywhere in this module, we use the following naming convention:
 # `obj_type` of non-core module = False

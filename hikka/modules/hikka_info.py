@@ -8,8 +8,8 @@ import git
 from hikkatl.tl.types import Message
 from hikkatl.utils import get_display_name
 
-from .. import loader, utils, version
-from ..inline.types import InlineQuery
+from hikka import loader, utils, version
+from hikka.inline.types import InlineQuery
 
 
 @loader.tds

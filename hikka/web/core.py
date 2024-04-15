@@ -33,10 +33,10 @@ import aiohttp_jinja2
 import jinja2
 from aiohttp import web
 
-from ..database import Database
-from ..loader import Modules
-from ..tl_cache import CustomTelegramClient
-from . import proxypass, root
+from hikka.database import Database
+from hikka.loader import Modules
+from hikka.tl_cache import CustomTelegramClient
+from hikka.web import proxypass, root
 
 logger = logging.getLogger(__name__)
 
@@ -50,16 +50,17 @@ class Web(root.Web):
         self.client_data = {}
         self.app = web.Application()
         self.proxypasser = proxypass.ProxyPasser()
+        self.resources_path = os.path.join(os.path.dirname(__file__), "resources")
         aiohttp_jinja2.setup(
             self.app,
             filters={"getdoc": inspect.getdoc, "ascii": ascii},
-            loader=jinja2.FileSystemLoader("web-resources"),
+            loader=jinja2.FileSystemLoader(self.resources_path),
         )
         self.app["static_root_url"] = "/static"
 
         super().__init__(**kwargs)
         self.app.router.add_get("/favicon.ico", self.favicon)
-        self.app.router.add_static("/static/", "web-resources/static")
+        self.app.router.add_static("/static/", f"{self.resources_path}/static")
 
     async def start_if_ready(
         self,

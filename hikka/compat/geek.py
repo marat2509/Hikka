@@ -16,10 +16,10 @@ def compat(code: str) -> str:
     :example:
     ```python
         code = '''
-            from ..inline import GeekInlineQuery, rand
-            from ..inline import rand, InlineQueryResultArticle
-            from ..inline import InlineQueryResultArticle, rand
-            from ..inline import rand, InlineQueryResultArticle, InputTextMessageContent
+            from hikka.inline import GeekInlineQuery, rand
+            from hikka.inline import rand, InlineQueryResultArticle
+            from hikka.inline import InlineQueryResultArticle, rand
+            from hikka.inline import rand, InlineQueryResultArticle, InputTextMessageContent
         '''
         print(compat(code))
     ```
@@ -28,20 +28,20 @@ def compat(code: str) -> str:
         [
             re.sub(
                 r"^( *)from \.\.inline import (.+)$",
-                r"\1from ..inline.types import \2",
+                r"\1from hikka.inline.types import \2",
                 re.sub(
                     r"^( *)from \.\.inline import rand[^,]*$",
-                    "\1from ..utils import rand",
+                    "\1from hikka.utils import rand",
                     re.sub(
                         r"^( *)from \.\.inline import rand, ?(.+)$",
-                        r"\1from ..inline.types import \2\n\1from ..utils import rand",
+                        r"\1from hikka.inline.types import \2\n\1from hikka.utils import rand",
                         re.sub(
                             r"^( *)from \.\.inline import (.+), ?rand[^,]*$",
-                            r"\1from ..inline.types import \2\n\1from ..utils import"
+                            r"\1from hikka.inline.types import \2\n\1from hikka.utils import"
                             r" rand",
                             re.sub(
                                 r"^( *)from \.\.inline import (.+), ?rand, ?(.+)$",
-                                r"\1from ..inline.types import \2, \3\n\1from ..utils"
+                                r"\1from hikka.inline.types import \2, \3\n\1from hikka.utils"
                                 r" import rand",
                                 line.replace("GeekInlineQuery", "InlineQuery").replace(
                                     "self.inline._bot",

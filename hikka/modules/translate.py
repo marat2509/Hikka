@@ -8,7 +8,7 @@ import logging
 
 from hikkatl.tl.types import Message
 
-from .. import loader, utils
+from hikka import loader, utils
 
 logger = logging.getLogger(__name__)
 

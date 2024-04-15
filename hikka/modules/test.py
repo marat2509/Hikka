@@ -14,8 +14,8 @@ from io import BytesIO
 
 from hikkatl.tl.types import Message
 
-from .. import loader, main, utils
-from ..inline.types import InlineCall
+from hikka import loader, main, utils
+from hikka.inline.types import InlineCall
 
 logger = logging.getLogger(__name__)
 

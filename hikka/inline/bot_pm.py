@@ -7,7 +7,7 @@
 import logging
 import typing
 
-from .types import InlineUnit
+from hikka.types import InlineUnit
 
 logger = logging.getLogger(__name__)
 

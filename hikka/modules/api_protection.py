@@ -17,9 +17,9 @@ from hikkatl.tl.tlobject import TLRequest
 from hikkatl.tl.types import Message
 from hikkatl.utils import is_list_like
 
-from .. import loader, utils
-from ..inline.types import InlineCall
-from ..web.debugger import WebDebugger
+from hikka import loader, utils
+from hikka.inline.types import InlineCall
+from hikka.web.debugger import WebDebugger
 
 logger = logging.getLogger(__name__)
 
